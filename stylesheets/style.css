@@ -4,8 +4,8 @@
 }
 
 body {
-	background-color: #ffffff;
-	color: #000000;
+	background-color: #fff;
+	color: #282828;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 }
@@ -45,20 +45,26 @@ p {
 	font-size: 17px;
 }
 
-.topnav a.active {
+.topnav a:not(:hover) {
+	color: #000;
+}
+
+.topnav a:link,
+.topnav a:visited {
+	color: #000;
+}
+
+.topnav a:not(.active):hover {
+	color: #a0a0a0;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	padding: 14px 16px 12px 16px;
 }
 
-.topnav a,
-.topnav a:link,
-.topnav a:visited {
-	color: #000000;
-}
-
-.topnav a:hover {
-  color: #a0a0a0;
+.topnav a.active {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	padding: 14px 16px 12px 16px;
 }
 
 .dark-mode-switch {
@@ -69,7 +75,7 @@ p {
 }
 
 .dark-mode-switch i.toggler {
-	color: #000000;
+	color: #282828;
 }
 
 .dark-mode-switch i.toggler:hover {
@@ -100,29 +106,17 @@ p {
 	margin: 10px 5px;
 	max-height: 20px;
 	width: auto;
-	filter: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(7496%) hue-rotate(329deg) brightness(106%) contrast(98%);
+	filter: brightness(0) saturate(100%) invert(9%) sepia(10%) saturate(8%) hue-rotate(81deg) brightness(92%) contrast(82%);
 }
 
 .grey-image:hover {
 	filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(41%) hue-rotate(154deg) brightness(97%) contrast(85%);
 }
 
-.footer {
-	text-align: left;
-	font-size: 8pt;
-	padding: 0 0 6px 6px;
-
-}
-
 @media all and (max-height: 580px){
 	.outer {
 		position: absolute;
 		top: 240px;
-	}
-	
-	.footer {
-		position: absolute;
-		top: 550px;
 	}
 }
 
@@ -133,11 +127,6 @@ p {
 		left: 0;
 		height: 100%;
 		z-index: -100;
-	}
-	
-	.footer {
-		position: absolute;
-		bottom: 6px;
 	}
 }
 
@@ -169,7 +158,7 @@ p {
 		float: left;
 		display: block;
 		padding: 14px 16px;
-		filter: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(7496%) hue-rotate(329deg) brightness(106%) contrast(98%);
+		filter: brightness(0) saturate(100%) invert(9%) sepia(10%) saturate(8%) hue-rotate(81deg) brightness(92%) contrast(82%);;
 	}
 	
 	.dropnav a.icon:hover {
@@ -196,22 +185,21 @@ p {
 		padding: 14px 16px;
 		text-decoration: none;
 		font-size: 17px;
-		color: #000000;
+		color: #282828;
 	}
 	
-	.dropnav.responsive a,
 	.dropnav.responsive a:link,
 	.dropnav.responsive a:visited {
-		color: #000000;
+		color: #282828;
 	}
 
-	.dropnav.responsive a:hover {
-		color: #a0a0a0 !important;
+	.dropnav.responsive a:hover:not(.icon, .active) {
+		background-color: #a0a0a0;
+		color: #fff !important;
 	}
 	
 	.dropnav.responsive a.active {
-		background-color: #000000;
-		color: #ffffff !important;
-		
+		background-color: #282828;
+		color: #fff !important;
 	}
 }
