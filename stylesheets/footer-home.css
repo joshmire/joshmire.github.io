@@ -1,0 +1,20 @@
+.footer {
+	text-align: left;
+	font-size: 8pt;
+	padding: 0 0 6px 6px;
+
+}
+
+@media all and (max-height: 580px){
+	.footer {
+		position: absolute;
+		top: 550px;
+	}
+}
+
+@media all and (min-height: 581px){
+	.footer {
+		position: absolute;
+		bottom: 6px;
+	}
+}
