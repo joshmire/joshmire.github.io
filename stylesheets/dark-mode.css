@@ -1,0 +1,61 @@
+.dark-mode {
+	background-color: #282828;
+	color: #a0a0a0;
+}
+
+.dark-mode .topnav {
+	color: #000;
+}
+
+.dark-mode .topnav a,
+.dark-mode .topnav a:link,
+.dark-mode .topnav a:visited {
+	color: #a0a0a0;
+}
+
+.dark-mode .topnav a:hover {
+  color: #fff;
+}
+
+.dark-mode .grey-image {
+	filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(41%) hue-rotate(154deg) brightness(97%) contrast(85%);
+}
+
+.dark-mode .grey-image:hover {
+	filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(344deg) brightness(105%) contrast(101%);
+}
+
+.dark-mode i.toggler {
+    color: #a0a0a0;
+}
+
+.dark-mode i.toggler:hover {
+    color: #fff;
+}
+
+@media all and (max-width: 600px) {
+	.dark-mode .dropnav a.icon {
+		filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(41%) hue-rotate(154deg) brightness(97%) contrast(85%);
+	}
+	
+	.dark-mode .dropnav a.icon:hover {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(344deg) brightness(105%) contrast(101%);
+	}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media all and (max-width: 600px) {
+	.dark-mode .dropnav.responsive a {
+		color: #a0a0a0;
+	}
+	
+	.dropnav.responsive a:hover {
+		color: #fff !important;
+	}
+	
+	.dark-mode .dropnav.responsive a.active {
+		background-color: #a0a0a0;
+		color: #000 !important;
+		
+	}
+}
