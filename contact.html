@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="https://kit.fontawesome.com/91e547386c.js" crossorigin= "anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/dark-mode.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/email-me.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/footer-contact.css">
+	
+	<title>Joshua Mire // Applied Scientist</title>
+
+</head>
+<body>
+
+	<header>
+		<div class="topnav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<!--
+				<li><a href="#">About</a></li>
+				-->
+				<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
+				<li><a href="#" class="active">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div class="dropnav" id="myDropNav">
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+			<div class="options">
+				<a href="index.html">Home</a>
+				<!--
+				<a href="#">About</a>
+				-->
+				<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
+				<a href="#" class="active">Contact</a>
+			</div>
+		</div>
+		
+		<div class="dark-mode-switch">
+			<a><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
+		</div>
+	</header>	
+	
+	<div class="main">
+		
+		<h1 class="fcf-h3">Email Me</h1>
+		
+		<br>
+		
+		<div class="fcf-body">
+
+			<div id="fcf-form">
+
+				<form id="fcf-form-id" class="fcf-form-class" method="post" action="php/email-me.php">
+					
+					<div class="fcf-form-group">
+						<label for="Name" class="fcf-label">Name</label>
+						<div class="fcf-input-group">
+							<input type="text" id="Name" name="Name" class="fcf-form-control" required>
+						</div>
+					</div>
+
+					<div class="fcf-form-group">
+						<label for="Email" class="fcf-label">Email Address</label>
+						<div class="fcf-input-group">
+							<input type="email" id="Email" name="Email" class="fcf-form-control" required>
+						</div>
+					</div>
+
+					<div class="fcf-form-group">
+						<label for="Subject" class="fcf-label">Subject</label>
+						<div class="fcf-input-group">
+							<input id="Subject" name="Subject" class="fcf-form-control" required></input>
+						</div>
+					</div>
+					
+					<div class="fcf-form-group">
+						<label for="Message" class="fcf-label">Message</label>
+						<div class="fcf-input-group">
+							<textarea id="Message" name="Message" class="fcf-form-control" rows="4" maxlength="3000" required></textarea>
+						</div>
+					</div>
+
+					<div class="fcf-form-group">
+						<button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div class="footer">
+	
+		<i><p>Created by Joshua Mire</p>
+		<p>Last Updated: Nov. 14, 2021</p></i>
+		
+	</div>
+	
+	<script type="text/javascript" src="scripts/dark-mode.js"></script>
+	<script type="text/javascript" src="scripts/dropnav.js"></script>
+	
+</body>
+</html>
