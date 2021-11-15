@@ -4,3 +4,17 @@
 	padding: 0 0 6px 6px;
 
 }
+
+@media all and (max-height: 576px){
+	.footer {
+		position: absolute;
+		top: 540px;
+	}
+}
+
+@media all and (min-height: 577px){
+	.footer {
+		position: absolute;
+		bottom: 6px;
+	}
+}
