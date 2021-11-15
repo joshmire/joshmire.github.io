@@ -131,6 +131,10 @@ p {
 }
 
 @media all and (min-width: 601px) {
+	.topnav {
+		
+	}
+	
 	.dropnav {
 	  display: none;
 	}
