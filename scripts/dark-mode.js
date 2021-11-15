@@ -1,32 +1,27 @@
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+darkOn = sessionStorage.getItem("dark") == "true" ? true : false;
+
+function setTheme(){
+  if(darkOn){
+    document.body.classList.add("dark-mode");
+	document.querySelector("#dark-mode-btn").classList.remove("fa-moon");
+	document.querySelector("#dark-mode-btn").classList.add("fa-sun");
+	sessionStorage.setItem("dark", "true")
+  }
+  else{
+    document.body.classList.remove("dark-mode");
+	document.querySelector("#dark-mode-btn").classList.remove("fa-sun");
+	document.querySelector("#dark-mode-btn").classList.add("fa-moon");
+	sessionStorage.setItem("dark", "false")
+  }
 }
 
-var app = document.getElementsByTagName("BODY")[0];
-if (localStorage.lightMode == "dark") {
-    app.setAttribute("data-light-mode", "dark");
+setTheme();
+
+function toggle(){
+  darkOn = !darkOn;
+  setTheme();
 }
 
-function toggle_light_mode() {
-    var app = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") 
-    {
-    localStorage.lightMode = "light";
-    app.setAttribute("data-light-mode", "light");
-    } 
-    else 
-    {
-    localStorage.lightMode = "dark";
-    app.setAttribute("data-light-mode", "dark");
-    }
-    console.log("lightMode = " + localStorage.lightMode);
-}
+var togButton = document.getElementById("dark-mode-btn");
 
-document.getElementById('dark-mode-btn').addEventListener('click', function (e) {
-    const toggler = document.body;
-    toggler.classList.toggle('dark-mode');
-    const target = e.target;
-    target.classList.toggle('fa-moon');
-    target.classList.toggle('fa-sun');
-});
+togButton.addEventListener("click", toggle);
