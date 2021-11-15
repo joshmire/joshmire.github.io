@@ -10,7 +10,7 @@
 
 .fcf-body {
 	text-align: left;
-	padding: 30px;
+	padding: 25px;
 	border: 1px solid #a0a0a0;
 	border-radius: 5px;
 	max-width: 100%;
@@ -20,14 +20,12 @@
     margin-bottom: 10px;
 }
 
+.fcf-form-group label {
+    margin-bottom: 5px;
+}
+
 .fcf-input-group {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: stretch;
-    align-items: stretch;
     width: 100%;
 }
 
@@ -35,7 +33,6 @@
     display: block;
     width: 100%;
     font-size: 12pt;
-    background-clip: padding-box;
     border: 1px solid #282828;
     outline: none;
     border-radius: 5px;
@@ -45,18 +42,10 @@
     border: 1px solid #fff;
 }
 
-.fcf-form-control:focus {
-    
-}
-
-select.fcf-form-control[size], select.fcf-form-control[multiple] {
-    height: auto;
-}
-
 textarea.fcf-form-control {
     height: auto;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 label.fcf-label {
@@ -69,25 +58,10 @@ label.fcf-label {
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
     border: 1px solid transparent;
     font-size: 14pt;
     line-height: 1.5;
     border-radius: 5px;
-}
-
-.fcf-btn:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.fcf-btn:focus, .fcf-btn.focus {
-    outline: 0;
 }
 
 .fcf-btn-primary {
@@ -114,34 +88,19 @@ label.fcf-label {
     border-color: #a0a0a0;
 }
 
-.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+.fcf-btn-primary:focus {
     color: #fff;
     background-color: #282828;
     border-color: #282828;
 }
 
-.dark-mode .fcf-btn-primary:focus, 
-.dark-mode .fcf-btn-primary.focus {
+.dark-mode .fcf-btn-primary:focus {
     color: #282828;
     background-color: #fff;
     border-color: #fff;
 }
 
-.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
-    padding: 0.5rem 1rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-}
-
 .fcf-btn-block {
     display: block;
-    width: 100%;
-}
-
-.fcf-btn-block+.fcf-btn-block {
-    margin-top: 0.5rem;
-}
-
-input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
     width: 100%;
 }
