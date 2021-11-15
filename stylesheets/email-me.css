@@ -4,11 +4,7 @@
 	padding: 30px;
 }
 
-#fcf-form {
-    display:block;
-}
-
-.fcf-body {
+.email-form {
 	text-align: left;
 	padding: 25px;
 	border: 1px solid #a0a0a0;
@@ -16,45 +12,46 @@
 	max-width: 100%;
 }
 
-.fcf-form-group {
+.form-body {
+    display:block;
+}
+
+.input-group {
     margin-bottom: 10px;
 }
 
-.fcf-form-group label {
+.input-group label {
     margin-bottom: 5px;
 }
 
-.fcf-input-group {
-    position: relative;
-    width: 100%;
-}
 
-.fcf-form-control {
+.email-input {
     display: block;
     width: 100%;
     font-size: 12pt;
     border: 1px solid #282828;
     outline: none;
     border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-.dark-mode .fcf-form-control {
+.dark-mode .email-input {
     border: 1px solid #fff;
 }
 
-textarea.fcf-form-control {
+textarea.email-input {
     height: auto;
-	font-family: Arial, Helvetica, sans-serif;
 	margin-bottom: 20px;
 }
 
-label.fcf-label {
+.email-label {
     display: inline-block;
 	font-size: 14pt;
 }
 
-.fcf-btn {
-    display: inline-block;
+.email-button {
+    display: block;
+	width: 100%;
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -62,45 +59,36 @@ label.fcf-label {
     font-size: 14pt;
     line-height: 1.5;
     border-radius: 5px;
-}
-
-.fcf-btn-primary {
-    color: #fff;
-    background-color: #282828;
+	background-color: #282828;
     border-color: #282828;
 }
 
-.dark-mode .fcf-btn-primary {
+.dark-mode .email-button {
     color: #282828;
     background-color: #fff;
     border-color: #fff;
 }
 
-.fcf-btn-primary:hover {
+.email-button:hover {
     color: #fff;
     background-color: #a0a0a0;
     border-color: #a0a0a0;
 }
 
-.dark-mode .fcf-btn-primary:hover {
+.dark-mode .email-button:hover {
     color: #282828;
     background-color: #a0a0a0;
     border-color: #a0a0a0;
 }
 
-.fcf-btn-primary:focus {
+.email-button:focus {
     color: #fff;
     background-color: #282828;
     border-color: #282828;
 }
 
-.dark-mode .fcf-btn-primary:focus {
+.dark-mode .email-button:focus {
     color: #282828;
     background-color: #fff;
     border-color: #fff;
-}
-
-.fcf-btn-block {
-    display: block;
-    width: 100%;
 }
