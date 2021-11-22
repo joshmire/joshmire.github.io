@@ -8,6 +8,7 @@ function gameOn(){
 }
 
 function quitGame(){
+    startGame()
     document.getElementById('game').style.display = 'none'
-    document.getElementById('content').style.display = 'grid'
+    document.getElementById('content').style.display = 'table'
 }
