@@ -102,6 +102,11 @@ p {
 	margin-right: auto;
 }
 
+#content {
+	justify-content: center;
+	vertical-align: middle;
+}
+
 .grey-image {
 	margin: 10px 5px;
 	max-height: 20px;
