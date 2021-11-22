@@ -76,7 +76,7 @@ function emptySquares() {
 }
 
 function bestSpot() {
-    return minimax(originalBoard, CIRCLE_CLASS).index;
+    return minimax(originalBoard, 0, CIRCLE_CLASS).index;
 }
 
 function checkTie() {
@@ -89,13 +89,13 @@ function checkTie() {
     }
 }
 
-function minimax(newBoard, player) {
+function minimax(newBoard, depth, player) {
 	var availSpots = emptySquares();
 
 	if (checkWin(newBoard, X_CLASS)) {
-		return {score: -10};
+		return {score: -10 - depth};
 	} else if (checkWin(newBoard, CIRCLE_CLASS)) {
-		return {score: 10};
+		return {score: 10 - depth};
 	} else if (availSpots.length === 0) {
 		return {score: 0};
 	}
@@ -106,10 +106,10 @@ function minimax(newBoard, player) {
 		newBoard[availSpots[i]] = player;
 
 		if (player == CIRCLE_CLASS) {
-			var result = minimax(newBoard, X_CLASS);
+			var result = minimax(newBoard, depth + 1, X_CLASS);
 			move.score = result.score;
 		} else {
-			var result = minimax(newBoard, CIRCLE_CLASS);
+			var result = minimax(newBoard, depth + 1, CIRCLE_CLASS);
 			move.score = result.score;
 		}
 
@@ -120,7 +120,7 @@ function minimax(newBoard, player) {
 
 	var bestMove;
 	if(player === CIRCLE_CLASS) {
-		var bestScore = -10000;
+		var bestScore = -Infinity;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score > bestScore) {
 				bestScore = moves[i].score;
@@ -128,7 +128,7 @@ function minimax(newBoard, player) {
 			}
 		}
 	} else {
-		var bestScore = 10000;
+		var bestScore = Infinity;
 		for(var i = 0; i < moves.length; i++) {
 			if (moves[i].score < bestScore) {
 				bestScore = moves[i].score;
