@@ -8,10 +8,13 @@
 	<script src="https://kit.fontawesome.com/91e547386c.js" crossorigin= "anonymous"></script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="scripts/tic-tac-toe.js" defer></script>
 	<script type="text/javascript" src="scripts/footer.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/dark-mode.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/tic-tac-toe.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/footer-home.css">
 	
 	<link rel="icon" type="image/ico" href="images/favicon.ico">
@@ -46,36 +49,55 @@
 		</div>
 	</header>	
 	
-	<div class="main">
+	<div class="main" id="main">
 		
-		<div class = "outer">
-			<div class = "middle">
-				<div class = "inner">
-				
-					<h1>Joshua Mire</h1>
-					<p>Data Scientist | Institutional Research</p>
-					
-					<div class="social-links">
-						<a href="https://www.linkedin.com/in/joshmire/" target="_blank" rel="noopener noreferrer">
-							<img src="images/social-icons/linkedin.svg" class="grey-image" alt="LinkedIn"/></a>
-						<a href="https://github.com/joshmire" target="_blank" rel="noopener noreferrer">
-							<img src="images/social-icons/github.svg" class="grey-image" alt="GitHub"/></a>
-						<a href="https://stackoverflow.com/users/13639111/joshua-mire" target="_blank" rel="noopener noreferrer">
-							<img src="images/social-icons/stackoverflow.svg" class="grey-image" alt="StackOverflow"/></a>
-						<a href="https://twitter.com/joshmire" target="_blank" rel="noopener noreferrer">
-							<img src="images/social-icons/twitter.svg" class="grey-image" alt="Twitter"/></a>
+		<div id="outer">
+			<div id="middle">
+				<div id="inner">
+					<div id="content">
+						<h1>Joshua Mire</h1>
+						<p>Data Scientist <a id="game-button" onclick="gameOn()" href="#">|</a> Institutional Research</p>
+						<div class="social-links">
+							<a href="https://www.linkedin.com/in/joshmire/" target="_blank" rel="noopener noreferrer">
+								<img src="images/social-icons/linkedin.svg" class="grey-image" alt="LinkedIn"/></a>
+							<a href="https://github.com/joshmire" target="_blank" rel="noopener noreferrer">
+								<img src="images/social-icons/github.svg" class="grey-image" alt="GitHub"/></a>
+							<a href="https://stackoverflow.com/users/13639111/joshua-mire" target="_blank" rel="noopener noreferrer">
+								<img src="images/social-icons/stackoverflow.svg" class="grey-image" alt="StackOverflow"/></a>
+							<a href="https://twitter.com/joshmire" target="_blank" rel="noopener noreferrer">
+								<img src="images/social-icons/twitter.svg" class="grey-image" alt="Twitter"/></a>
+						</div>
+					</div>
+
+					<div id="game">
+						<div class="board x" id="board">
+							<div class="cell" id="0" data-cell></div>
+							<div class="cell" id="1" data-cell></div>
+							<div class="cell" id="2" data-cell></div>
+							<div class="cell" id="3" data-cell></div>
+							<div class="cell" id="4" data-cell></div>
+							<div class="cell" id="5" data-cell></div>
+							<div class="cell" id="6" data-cell></div>
+							<div class="cell" id="7" data-cell></div>
+							<div class="cell" id="8" data-cell></div>
+						</div>
+						<div class="winning-message" id="winningMessage">
+							<div data-winning-message-text></div>
+							<button id="restartButton">Restart</button>
+							<button id="quitButton">Quit</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	
 	</div>
 	
 	<div class="footer"></div>
 	
-	<image id="about-pic" style="visibility: hidden;">
+	<image id="about-pic" style="display: none;">
 	
 	<script type="text/javascript" src="scripts/dark-mode.js"></script>
+	<script type="text/javascript" src="scripts/show-game.js"></script>
 	<script type="text/javascript" src="scripts/dropnav.js"></script>
 	
 </body>
