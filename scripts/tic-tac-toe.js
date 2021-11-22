@@ -63,7 +63,11 @@ function checkWin(board, player) {
 
 
 function gameOver(gameWon) {
-    winningMessageTextElement.innerText = `${gameWon.player == X_CLASS ? "X's" : "O's"} Win!`
+    if (gameWon.player == X_CLASS) {
+        winningMessageTextElement.innerText = "You win!" + String.fromCodePoint(0x1F389)
+    } else {
+        winningMessageTextElement.innerText = "You lose!" + String.fromCodePoint(0x1F625)
+    }
     winningMessageElement.classList.add('show')
 }
 

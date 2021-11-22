@@ -1,6 +1,4 @@
-const quitButton = document.getElementById('quitButton')
-
-quitButton.addEventListener('click', quitGame)
+document.getElementById("return-button").addEventListener('click', quitGame)
 
 function gameOn(){
     document.getElementById('game').style.display = 'grid'

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js">
 <head>
 
 	<meta charset="utf-8">
@@ -70,22 +71,28 @@
 			</div>
 		</div>
 
-		<div id="game">
-			<div class="board x" id="board">
-				<div class="cell" id="0" data-cell></div>
-				<div class="cell" id="1" data-cell></div>
-				<div class="cell" id="2" data-cell></div>
-				<div class="cell" id="3" data-cell></div>
-				<div class="cell" id="4" data-cell></div>
-				<div class="cell" id="5" data-cell></div>
-				<div class="cell" id="6" data-cell></div>
-				<div class="cell" id="7" data-cell></div>
-				<div class="cell" id="8" data-cell></div>
-			</div>
-			<div class="winning-message" id="winningMessage">
-				<div data-winning-message-text></div>
-				<button id="restartButton">Restart</button>
-				<button id="quitButton">Quit</button>
+		<div class="outer" id="game">
+			<div class="middle">
+				<div class="inner">
+					<div class="board x" id="board">
+						<div class="cell" id="0" data-cell></div>
+						<div class="cell" id="1" data-cell></div>
+						<div class="cell" id="2" data-cell></div>
+						<div class="cell" id="3" data-cell></div>
+						<div class="cell" id="4" data-cell></div>
+						<div class="cell" id="5" data-cell></div>
+						<div class="cell" id="6" data-cell></div>
+						<div class="cell" id="7" data-cell></div>
+						<div class="cell" id="8" data-cell></div>
+					</div>
+					<div class="return" id="return">
+						<a><i id="return-button" class="fas fa-times-circle"></i></a>
+					</div>
+					<div class="winning-message" id="winningMessage">
+						<div data-winning-message-text></div>
+						<button id="restartButton">Restart</button>
+					</div>
+				</div>
 			</div>
 
 	</div>
