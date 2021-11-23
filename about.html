@@ -9,6 +9,10 @@
 	<script src="https://kit.fontawesome.com/91e547386c.js" crossorigin= "anonymous"></script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+	<script type="text/javascript" src="scripts/dark-mode.js" defer></script>
+	<script type="text/javascript" src="scripts/dropnav.js" defer></script>
 	<script type="text/javascript" src="scripts/footer.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
@@ -24,31 +28,33 @@
 <body>
 
 	<header>
-		<div class="topnav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#" class="active">About</a></li>
-				<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		
-		<div class="dropnav" id="myDropNav">
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			<div class="options">
-				<a href="index.html">Home</a>
-				<a href="#" class="active">About</a>
-				<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
-				<a href="contact.html">Contact</a>
+		<nav>
+			<div class="topnav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#" class="active">About</a></li>
+					<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
 			</div>
-		</div>
+
+			<div class="dropnav" id="myDropNav">
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<div class="options">
+					<a href="index.html">Home</a>
+					<a href="#" class="active">About</a>
+					<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
+					<a href="contact.html">Contact</a>
+				</div>
+			</div>
+		</nav>
 		
 		<div class="dark-mode-switch">
 			<a><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
 		</div>
 	</header>	
 	
-	<div class="main">
+	<main>
 		<h1>About Me</h1>
 		<br>
 		<div class="about">
@@ -66,13 +72,11 @@
 				<p>Coming soon.</p>
 			</div>
 		</div>
+	</main>
 	
-	</div>
-	
-	<div class="footer"></div>
-	
-	<script type="text/javascript" src="scripts/dark-mode.js"></script>
-	<script type="text/javascript" src="scripts/dropnav.js"></script>
+	<footer>
+		<div class="footer"></div>
+	</footer>
 	
 </body>
 </html>

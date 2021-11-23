@@ -13,6 +13,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="scripts/tic-tac-toe.js" defer></script>
+	<script type="text/javascript" src="scripts/dark-mode.js" defer></script>
+	<script type="text/javascript" src="scripts/show-game.js" defer></script>
+	<script type="text/javascript" src="scripts/dropnav.js" defer></script>
 	<script type="text/javascript" src="scripts/footer.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
@@ -98,31 +101,35 @@
 <body>
 
 	<header>
-		<div class="topnav">
-			<ul>
-				<li><a href="#" class="active">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-		
-		<div class="dropnav" id="myDropNav">
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			<div class="options">
-				<a href="#" class="active">Home</a>
-				<a href="about.html">About</a>
-				<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
-				<a href="contact.html">Contact</a>
+
+		<nav>
+			<div class="topnav">
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
 			</div>
-		</div>
+
+			<div class="dropnav" id="myDropNav">
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<div class="options">
+					<a href="#" class="active">Home</a>
+					<a href="about.html">About</a>
+					<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
+					<a href="contact.html">Contact</a>
+				</div>
+			</div>
+		</nav>
 		
 		<div class="dark-mode-switch">
 			<a><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
 		</div>
+
 	</header>	
 	
-	<div class="main">
+	<main>
 		
 		<div class="outer" id="content">
 			<div class="middle">
@@ -168,16 +175,15 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	
+		<image id="about-pic" alt="Joshua Mire" style="display: none;">
 
-	</div>
-	
-	<div class="footer"></div>
-	
-	<image id="about-pic" alt="Joshua Mire" style="display: none;">
-	
-	<script type="text/javascript" src="scripts/dark-mode.js"></script>
-	<script type="text/javascript" src="scripts/show-game.js"></script>
-	<script type="text/javascript" src="scripts/dropnav.js"></script>
+	</main>
+
+	<footer>
+		<div class="footer"></div>
+	</footer>
 	
 </body>
 </html>

@@ -9,6 +9,9 @@
 	<script src="https://kit.fontawesome.com/91e547386c.js" crossorigin= "anonymous"></script>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="scripts/dark-mode.js" defer></script>
+	<script type="text/javascript" src="scripts/dropnav.js" defer></script>
 	<script type="text/javascript" src="scripts/footer.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
@@ -25,40 +28,37 @@
 <body>
 
 	<header>
-		<div class="topnav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
-				<li><a href="#" class="active">Contact</a></li>
-			</ul>
-		</div>
-		
-		<div class="dropnav" id="myDropNav">
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-			<div class="options">
-				<a href="index.html">Home</a>
-				<a href="about.html">About</a>
-				<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
-				<a href="#" class="active">Contact</a>
+		<nav>
+			<div class="topnav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
+					<li><a href="#" class="active">Contact</a></li>
+				</ul>
 			</div>
-		</div>
+			
+			<div class="dropnav" id="myDropNav">
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<div class="options">
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
+					<a href="#" class="active">Contact</a>
+				</div>
+			</div>
+		</nav>
 		
 		<div class="dark-mode-switch">
 			<a><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
 		</div>
 	</header>	
 	
-	<div class="main">
-		
+	<main>
 		<h1>Message Me</h1>
-		
 		<br>
-		
 		<div class="email-form">
-
 			<form id="email-form" class="form-body" method="post" action="https://formspree.io/f/xbjqnkan">
-				
 				<div class="input-group">
 					<label for="name" class="email-label">Name</label>
 					<input type="text" id="name" name="name" class="email-input" placeholder="Full name" required>
@@ -78,21 +78,19 @@
 					<label for="message" class="email-label">Message</label>
 					<textarea id="message" name="message" class="email-input" rows="4" maxlength="3000" placeholder="Your message..." required></textarea>
 				</div>
+
 				<div class="input-group">					
 					<button type="submit" name="submit" id="email-button" class="email-button">Send Message</button>
 				</div>
-				
-				
 			</form>
 		</div>
-	</div>
-	
-	<div class="footer"></div>
-	
-	<image id="about-pic" alt="Joshua Mire" style="visibility: hidden;">
 
-	<script type="text/javascript" src="scripts/dark-mode.js"></script>
-	<script type="text/javascript" src="scripts/dropnav.js"></script>
+		<image id="about-pic" alt="Joshua Mire" style="visibility: hidden;">
+	</main>
+	
+	<footer>
+		<div class="footer"></div>
+	</footer>
 	
 </body>
 </html>
