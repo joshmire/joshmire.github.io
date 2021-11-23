@@ -110,6 +110,16 @@ p {
 	filter: brightness(0) saturate(100%) invert(67%) sepia(0%) saturate(41%) hue-rotate(154deg) brightness(97%) contrast(85%);
 }
 
+.grey-image#StackOverflow {
+	padding: 0 calc(10px / 6);
+}
+
+.grey-image#hashtag{
+	width: calc(20px / .88);
+	position: relative;
+	right: calc(((20px / .88) - 20px) / 2);
+}
+
 @media all and (max-height: 580px){
 	.outer {
 		position: absolute;
