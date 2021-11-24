@@ -34,6 +34,16 @@ main {
 	margin-bottom: 15px;
 }
 
+.about-text a,
+.about-text a:hover,
+.about-text a:active,
+.about-text a:visited {
+	border:none;
+    outline:none;
+    text-decoration:none;
+    color:inherit;
+}
+
 .footer {
 	text-align: left;
 	font-size: 8pt;
