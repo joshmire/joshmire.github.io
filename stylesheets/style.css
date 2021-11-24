@@ -120,6 +120,10 @@ p {
 	right: calc(((20px / .88) - 20px) / 2);
 }
 
+.greyscale {
+	filter: grayscale(100%);
+}
+
 @media all and (max-height: 580px){
 	.outer {
 		position: absolute;

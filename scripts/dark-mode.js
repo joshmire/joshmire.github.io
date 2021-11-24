@@ -7,8 +7,7 @@ function setTheme(){
 	document.querySelector("#dark-mode-btn").classList.add("fa-sun")
 	document.getElementById("dark-mode-link").setAttribute("title", "Light Mode")
 	if (document.getElementById("about-pic") != null) {
-		document.getElementById("about-pic").setAttribute("href", "images/me/02.jpg")
-		document.getElementById("about-pic").setAttribute("x", "-30")
+		document.getElementById("about-pic").classList.add("greyscale")
 	}
 
 	sessionStorage.setItem("dark", "true")
@@ -19,8 +18,7 @@ function setTheme(){
 	document.querySelector("#dark-mode-btn").classList.add("fa-moon")
 	document.getElementById("dark-mode-link").setAttribute("title", "Dark Mode")
 	if (document.getElementById("about-pic") != null) {
-		document.getElementById("about-pic").setAttribute("href", "images/me/01.jpg")
-		document.getElementById("about-pic").setAttribute("x", "0")
+		document.getElementById("about-pic").classList.remove("greyscale")
 	}
 	sessionStorage.setItem("dark", "false")
   }
