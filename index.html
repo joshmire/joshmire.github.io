@@ -26,7 +26,7 @@
     <link rel="icon" type=“image/png” href="images/favicon.png">
     <link rel="shortcut icon" type=“image/png” href="images/favicon.png">
 	
-	<title>Joshua Mire // Data Scientist</title>
+	<title>Joshua Mire | Harnessing Data for Strategic Decision Making</title>
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -66,16 +66,32 @@
 				"addressRegion": "FL",
 				"addressCountry": "United States"
 			},
-			"alumniOf": {
-				"@type": "OrganizationRole",
-				"alumniOf": {
-					"@type": "CollegeOrUniversity",
-					"name": "University of Florida",
-					"sameAs": "http://en.wikipedia.org/wiki/University_of_Florida"
+			"alumniOf": [
+				{
+					"@type": "OrganizationRole",
+					"alumniOf": {
+						"@type": "CollegeOrUniversity",
+						"name": "University of Florida",
+						"department": "Food and Resource Economics",
+						"award": "Bachelor of Science",
+						"url": "https://www.ufl.edu",
+						"sameAs": "http://en.wikipedia.org/wiki/University_of_Florida"
+					},
+					"startDate": "2013"
 				},
-				"startDate": "2008",
-				"endDate": "2013"
-			},
+				{
+					"@type": "OrganizationRole",
+					"alumniOf": {
+						"@type": "CollegeOrUniversity",
+						"name": "Florida Atlantic University",
+						"department": "Economics",
+						"award": "Master of Science",
+						"url": "https://www.fau.edu",
+						"sameAs": "http://en.wikipedia.org/wiki/Florida_Atlantic_University"
+					},
+					"startDate": "2016"
+				}
+			],
 			"nationality": "United States",
 			"birthPlace": {
 				"@type": "Place",
@@ -105,26 +121,26 @@
 		<nav>
 			<div class="topnav">
 				<ul>
-					<li><a href="#" class="active">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#" title="Home" class="active">Home</a></li>
+					<li><a href="about.html" title="About">About</a></li>
+					<li><a href="https://github.com/joshmire/" title="Projects" target="_blank" rel="noopener noreferrer">Projects</a></li>
+					<li><a href="contact.html"title="Contact">Contact</a></li>
 				</ul>
 			</div>
 
 			<div class="dropnav" id="myDropNav">
-				<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+				<a href="javascript:void(0);" title="Navigation" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
 				<div class="options">
-					<a href="#" class="active">Home</a>
-					<a href="about.html">About</a>
-					<a href="https://github.com/joshmire/" target="_blank" rel="noopener noreferrer">Projects</a>
-					<a href="contact.html">Contact</a>
+					<a href="#" title="Home" class="active">Home</a>
+					<a href="about.html"title="About">About</a>
+					<a href="https://github.com/joshmire/" title="Projects" target="_blank" rel="noopener noreferrer">Projects</a>
+					<a href="contact.html" title="Contact">Contact</a>
 				</div>
 			</div>
 		</nav>
 		
 		<div class="dark-mode-switch">
-			<a><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
+			<a title="Dark Mode" id="dark-mode-link"><i id="dark-mode-btn" class="toggler far fa-moon"></i></a>
 		</div>
 
 	</header>	
@@ -137,15 +153,15 @@
 					<h1>Joshua Mire</h1>
 					<p>Data Scientist | Institutional Research</p>
 					<div class="social-links">
-						<a href="https://www.linkedin.com/in/joshmire/" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.linkedin.com/in/joshmire/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
 							<img src="images/social-icons/linkedin.svg" class="grey-image" alt="LinkedIn"/></a>
-						<a href="https://github.com/joshmire" target="_blank" rel="noopener noreferrer">
+						<a href="https://github.com/joshmire" title="GitHub" target="_blank" rel="noopener noreferrer">
 							<img src="images/social-icons/github.svg" class="grey-image" alt="GitHub"/></a>
-						<a href="https://stackoverflow.com/users/13639111/joshua-mire" target="_blank" rel="noopener noreferrer">
+						<a href="https://stackoverflow.com/users/13639111/joshua-mire" title="StackOverflow" target="_blank" rel="noopener noreferrer">
 							<img src="images/social-icons/stackoverflow.svg" class="grey-image" id="StackOverflow" alt="StackOverflow"/></a>
-						<a href="https://twitter.com/joshmire" target="_blank" rel="noopener noreferrer">
+						<a href="https://twitter.com/joshmire" title="Twitter" target="_blank" rel="noopener noreferrer">
 							<img src="images/social-icons/twitter.svg" class="grey-image" alt="Twitter"/></a>
-						<a href="#" id="game-button" onclick="gameOn()">
+						<a href="#" title="???" id="game-button" onclick="gameOn()">
 							<img src="images/social-icons/hash.svg" class="grey-image" id="hashtag" alt="Tic-Tac-Toe"/></a>
 					</div>
 				</div>
@@ -167,7 +183,7 @@
 						<div class="cell" id="8" data-cell></div>
 					</div>
 					<div class="return" id="return">
-						<a><i id="return-button" class="fas fa-times-circle"></i></a>
+						<a title="Quit Game" id="escape-game"><i id="return-button" class="fas fa-times-circle"></i></a>
 					</div>
 					<div class="winning-message" id="winningMessage">
 						<div data-winning-message-text></div>
@@ -177,8 +193,6 @@
 			</div>
 		</div>
 	
-		<image id="about-pic" alt="Joshua Mire" style="display: none;">
-
 	</main>
 
 	<footer>
