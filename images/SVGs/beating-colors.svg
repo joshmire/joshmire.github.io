@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"  viewBox="0 0 100 100">
+	
+	<title>Beating Colors</title>
+
+	<desc>
+	
+		A 100 x 100 pixel scalable vector graphic of a beating heart.  The 
+		heart "beats" every two seconds.  With every beat the heart changes 
+		to a random color.  With every color change the background is set 
+		to the inverse color of the heart.
+		
+	</desc>
+
+	<metadata
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:dc="http://purl.org/dc/elements/1.1/"
+		xmlns:cc="http://creativecommons.org/ns#">
+		<rdf:RDF>
+			<cc:Work rdf:about="">
+				<dc:language>en</dc:language>
+				<dc:format>image/svg+xml</dc:format>
+				<dc:type rdf:resource="http://purl.org/dc/dcmitype/MovingImage" />
+				<dc:title>Beating Colors</dc:title>
+				<dc:description>A 100 x 100 pixel scalable vector graphic of a beating heart.  The heart "beats" every two seconds.  With every beat the heart changes to a random color.  With every color change the background is set to the inverse color of the heart.</dc:description>
+				<dc:date>February 21, 2022</dc:date>
+				<dc:creator>
+					<cc:Agent>
+						<dc:title rdf:resource="https://joshmire.com/">JMIRE</dc:title>
+					</cc:Agent>
+				</dc:creator>
+				<dc:subject>
+					<rdf:Bag>
+						<rdf:li>Beating Heart</rdf:li>
+						<rdf:li>Random Colors</rdf:li>
+					</rdf:Bag>
+				</dc:subject>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+
+	<style type="text/css"><![CDATA[
+		
+		#heart {
+			animation: pulse 2s ease infinite;
+		}
+		
+		#txtPath {
+			transform-origin: center;
+			transform: scale(0.99); 
+		}
+
+		@keyframes pulse {
+			0% { 
+				transform-origin: center;
+				transform: scale(1); 
+			}
+			11% { 
+				transform-origin: center;
+				transform: scale(1.1); 
+			}
+			16.5% { 
+				transform-origin: center;
+				transform: scale(1.05); 
+			}
+			22% { 
+				transform-origin: center;
+				transform: scale(1.1); 
+			}
+			33% {
+				transform-origin: center;
+				transform: scale(1); 
+			}
+			100% { 
+				transform-origin: center;
+				transform: scale(1); 
+			}
+		}
+
+	]]></style>
+
+	<defs>
+	
+		<clipPath id="clip1">
+			<rect x="0" y="0" width="100%" height="100%"/>
+		</clipPath>
+		
+		<audio xmlns="http://www.w3.org/1999/xhtml">
+			<source src="assets/sounds/sound.ogg" type="audio/ogg"/>
+		</audio>
+		
+	</defs>
+	
+	<g clip-path="url(#clip1)">
+		
+		<rect id="bg" height="100%" width="100%" />
+		
+		<g id="heart">
+			
+			<path id="shape"
+				d="M 50,90
+					Q 90,60 90,30
+					A 20,20 0,0,0 50,30
+					A 20,20 0,0,0 10,30
+					Q 10,60 50,90 z"
+			/>
+			
+			<path id="txtPath"
+				d="M 50,90
+					Q 90,60 90,30
+					A 20,20 0,0,0 50,30
+					A 20,20 0,0,0 10,30
+					Q 10,60 50,90 z"
+			/>
+			
+			<text id="txt" text-anchor="end">
+				<textPath id="txtContent" href="#txtPath" path-anchor="end" startOffset="100%">
+				</textPath>
+			</text>
+		
+		</g>
+	</g>
+	
+	<script type="text/javascript"><![CDATA[
+
+		function getRandomColor() {
+			var letters = '0123456789ABCDEF';
+			var color = '#';
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		}
+
+		function invertColor(hex) {
+
+			hex = hex.slice(1);
+
+			let r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+				g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+				b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+
+			return '#' + padZero(r) + padZero(g) + padZero(b);
+		}
+
+		function padZero(str, len) {
+
+			len = len || 2;
+
+			let zeros = new Array(len).join('0');
+
+			return (zeros + str).slice(-len);
+		} 
+
+		function setColors(){
+			let color = getRandomColor(),
+		        opposite = invertColor(color);
+			document.getElementById("bg").setAttribute("fill", opposite);
+			document.getElementById("shape").setAttribute("fill", color);
+			document.getElementById("txtPath").setAttribute("fill", color);
+			document.getElementById("txt").setAttribute("fill", opposite);
+			document.getElementById("txtContent").textContent = color;
+		}
+
+		setColors();
+
+		setInterval(function(){
+			setColors();
+		}, 2000);
+
+	]]></script>
+
+</svg>
